@@ -1,0 +1,125 @@
+:root {
+    box-sizing: border-box;
+    color: white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #284C7E;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.header {
+    font-family: cursive;
+    text-align: center;
+}
+
+.header__title {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 40%;
+    font-size: 5em;
+    background: crimson;
+    box-shadow: 0 -150px 70px -120px teal inset,
+                0 -220px 70px -120px yellowgreen inset,
+                0 -280px 70px -120px gold inset;
+    border-radius: 30px;
+    border: 2px solid rgb(27, 58, 114);
+    animation: background 4s infinite alternate;
+}
+
+@keyframes background {
+    50% {
+      background: darkviolet;
+      box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                  0 -210px 70px -120px teal inset,
+                  0 -280px 70px -120px plum inset;
+    }
+  }
+
+.menu {
+    margin-top: 80px;
+    padding: 0;
+}
+
+.menu__list {
+    padding: 0;
+    list-style-type: none;
+    font-size: 2rem;
+    display: flex;
+}
+
+.menu__item {
+    width: 25%;
+    text-align: center;
+    height: 50px;
+}
+
+.menu__item:not(:nth-last-child(4)) {
+    border-left: 2px solid white;
+}
+
+.menu__link{
+    text-decoration: none;
+    color: white;
+}
+
+.activated {
+    font-size: 2.5rem;
+    color:rgb(195, 233, 170);
+}
+
+.fieldset {
+    background-color: rgb(59, 68, 70);
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+.row:nth-child(1) {
+    margin-top: 20px;
+}
+
+.row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row > label {
+    width: 12vw;
+}
+
+.even {
+    margin-left: 150px;
+}
+
+input:focus {
+    background-color: rgb(0, 255, 115);
+}
+
+#submit {
+    background-color: rgb(200, 255, 0);
+    border-radius: 2em;
+    width: 10%;
+    font-size: 2rem;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: .8em;
+    bottom: 0;
+}
