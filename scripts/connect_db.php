@@ -1,13 +1,34 @@
 <?php
+# Этот скрипт ориентирован на работу со страницей index.html
+# Для других страниц необходимо создать подобные скрипты
+
+
 # Подключение к базе данных
 $db = mysqli_connect("localhost", "root", "_Qeadzc90", "books");  # сервер, пользователь, пароль, база данных
 
-$price = 700;   // Цена для условия фильтрации
+$title = $_REQUEST['title'];
+$isbn = $_REQUEST['isbn'];
+$author = $_REQUEST['author'];
+$price = $_REQUEST['price'];
 
-# Список тестовых запросов к базе данных
-#$sql = "SELECT * FROM `delivery`";
-$sql = "SELECT `title`, `price` FROM `editions` WHERE price <= $price";
-#$sql = "SELECT `title`, `price` FROM `editions_orders` JOIN `orders` ON `ord_id` = `ord_id` JOIN `editions` ON `isbn` = `isbn`";
+# Запрос к таблице изданий
+#$sql = "SELECT * FROM `editions` WHERE author LIKE '%$author%'";
+#$sql = "SELECT * FROM `editions` WHERE title LIKE \"%{$title}%\" OR isbn = $isbn OR author LIKE \"%{$author}%\" OR price = $price";
+if ($title !== "") {
+  $sql = "SELECT * FROM `editions` WHERE title LIKE '%$title%'";
+}
+elseif ($isbn !== "") {
+  $sql = "SELECT * FROM `editions` WHERE isbn = $isbn";
+}
+elseif ($author !== "") {
+  $sql = "SELECT * FROM `editions` WHERE author LIKE '%$author%'";
+}
+elseif ($price !== "") {
+  $sql = "SELECT * FROM `editions` WHERE price = $price";
+}
+else {
+  $sql = "SELECT * FROM `editions`";
+}
 
 # Отправка запроса
 $res = $db -> query($sql);
@@ -20,13 +41,11 @@ $res = $db -> query($sql);
         while ($row = $res -> fetch_assoc()) {
           
           # Вывод запроса
-          #echo "id службы: {$row["title"]} \nИмя организации: {$row["title"]} \nСтоимость доставки: {$row["title"]} \nСрок доставки (дней): {$row["term"]}\n";
-          #echo "Название книги: {$row["title"]} \nСтоимость книги: {$row["price"]} руб\n";
-          echo "Название книги: {$row["title"]} \nСтоимость книги с доставкой: {$row["price"]} руб\n";
-          echo "<------------------------------------->\n\n";
+          echo "<p>Название: {$row["title"]} <br> Автор: {$row["author"]} <br> ISBN: {$row["isbn"]} <br> Цена: {$row["price"]} руб</p>";
+          #echo "<------------------------------------->\n\n";
         }
 
       # Если таблица пустая, будет выведено "Данных нет";
       } else {
-        echo "Данные отсутствуют!";
+        echo 'Данные отсутствуют!';
       }
