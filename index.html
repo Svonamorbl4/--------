@@ -27,7 +27,7 @@
     </ul>
 </menu>
 <fieldset class="fieldset">
-    <form action="./scripts/connect_db.php" class="fieldset__form">
+    <form action="./scripts/editions.php" class="fieldset__form">
         <div class="row">
             <label for="title">Название книги:</label><br/>
             <input type="text" name="title" size="50"><br/>
@@ -42,6 +42,40 @@
         </div>
         <div class="row">
             <input id="submit" type="submit" value="Найти"><br/>
+        </div>
+    </form>
+    <form action="./scripts/editions_add.php" class="fieldset__form">
+        <div class="row">
+            <label for="title">Название книги:</label><br/>
+            <input type="text" name="title" size="50"><br/>
+            <label class="even" for="author">Автор:</label><br/>
+            <input type="text" name="author" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="isbn">isbn:</label><br/>
+            <input type="text" name="isbn" size="50"><br/>
+            <label class="even" for="price">Цена:</label><br/>
+            <input type="text" name="price" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Добавить"><br/>
+        </div>
+    </form>
+    <form action="./scripts/editions_drop.php" class="fieldset__form">
+        <div class="row">
+            <label for="title">Название книги:</label><br/>
+            <input type="text" name="title" size="50"><br/>
+            <label class="even" for="author">Автор:</label><br/>
+            <input type="text" name="author" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="isbn">isbn:</label><br/>
+            <input type="text" name="isbn" size="50"><br/>
+            <label class="even" for="price">Цена:</label><br/>
+            <input type="text" name="price" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Удалить"><br/>
         </div>
     </form>
 </fieldset>
