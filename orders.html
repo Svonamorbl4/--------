@@ -29,14 +29,41 @@
 <fieldset class="fieldset">
     <form action="./scripts/orders.php" class="fieldset__form">
         <div class="row">
-            <label for="title">Номер заказа:</label><br/>
-            <input type="text" name="title" size="50"><br/>
-            <label class="even" for="author">Пункт назначения:</label><br/>
-            <input type="text" name="author" size="50"><br/>
+            <label for="id">* Номер заказа:</label><br/>
+            <input type="text" name="id" size="50"><br/>
         </div>
-
         <div class="row">
             <input id="submit" type="submit" value="Найти"><br/>
+        </div>
+    </form>
+    <form action="./scripts/orders_add.php" class="fieldset__form">
+        <div class="row">
+            <label for="id">* Номер заказа:</label><br/>
+            <input type="text" name="id" size="50"><br/>
+            <label class="even" for="delivery">Код служб. дост:</label><br/>
+            <input type="text" name="delivery" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="price">Оплачено:</label><br/>
+            <input type="text" name="price" size="50"><br/>
+            <label class="even" for="destination">Адрес доставки:</label><br/>
+            <input type="text" name="destination" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="purDate">Дата доставки:</label><br/>
+            <input type="text" name="purDate" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Добавить"><br/>
+        </div>
+    </form>
+    <form action="./scripts/orders_drop.php" class="fieldset__form">
+        <div class="row">
+            <label for="id">* Номер заказа:</label><br/>
+            <input type="text" name="id" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Удалить"><br/>
         </div>
     </form>
 </fieldset>

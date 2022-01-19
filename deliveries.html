@@ -29,14 +29,39 @@
 <fieldset class="fieldset">
     <form action="./scripts/deliveries.php" class="fieldset__form">
         <div class="row">
-            <label for="service">Служба доставки:</label><br/>
-            <input type="text" name="service" size="50"><br/>
-            <label class="even" for="price">Срок доставки:</label><br/>
+            <label for="title">Название организации:</label><br/>
+            <input type="text" name="title" size="50"><br/>
+            <label class="even" for="price">Стоимость:</label><br/>
             <input type="text" name="price" size="50"><br/>
         </div>
-
         <div class="row">
             <input id="submit" type="submit" value="Найти"><br/>
+        </div>
+    </form>
+    <form action="./scripts/deliveries_add.php" class="fieldset__form">
+        <div class="row">
+            <label for="id">* Id организации:</label><br/>
+            <input type="text" name="id" size="50"><br/>
+            <label class="even" for="title">Название организации:</label><br/>
+            <input type="text" name="title" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="price">Стоимость услуг:</label><br/>
+            <input type="text" name="price" size="50"><br/>
+            <label class="even" for="term">Сроки доставки:</label><br/>
+            <input type="text" name="term" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Добавить"><br/>
+        </div>
+    </form>
+    <form action="./scripts/deliveries_drop.php" class="fieldset__form">
+        <div class="row">
+            <label for="id">* Id организации:</label><br/>
+            <input type="text" name="id" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Удалить"><br/>
         </div>
     </form>
 </fieldset>
