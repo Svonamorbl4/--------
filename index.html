@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Книга почтой №32</title>
 </head>
 <body>
@@ -52,10 +52,16 @@
             <input type="text" name="author" size="50"><br/>
         </div>
         <div class="row">
-            <label for="isbn">isbn:</label><br/>
+            <label for="isbn">* isbn:</label><br/>
             <input type="text" name="isbn" size="50"><br/>
             <label class="even" for="price">Цена:</label><br/>
             <input type="text" name="price" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="publication">Публикация (YYYY:MM:DD):</label><br/>
+            <input type="text" name="publication" size="50"><br/>
+            <label class="even" for="quantity">Количество:</label><br/>
+            <input type="text" name="quantity" size="50"><br/>
         </div>
         <div class="row">
             <input id="submit" type="submit" value="Добавить"><br/>
@@ -63,16 +69,8 @@
     </form>
     <form action="./scripts/editions_drop.php" class="fieldset__form">
         <div class="row">
-            <label for="title">Название книги:</label><br/>
-            <input type="text" name="title" size="50"><br/>
-            <label class="even" for="author">Автор:</label><br/>
-            <input type="text" name="author" size="50"><br/>
-        </div>
-        <div class="row">
-            <label for="isbn">isbn:</label><br/>
-            <input type="text" name="isbn" size="50"><br/>
-            <label class="even" for="price">Цена:</label><br/>
-            <input type="text" name="price" size="50"><br/>
+            <label for="isbn">* isbn:</label><br/>
+            <input type="text" name="isbn" size="50"><br/> 
         </div>
         <div class="row">
             <input id="submit" type="submit" value="Удалить"><br/>

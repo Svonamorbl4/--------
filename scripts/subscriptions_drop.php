@@ -1,15 +1,14 @@
 <?php
-# Этот скрипт ориентирован на работу со страницей index.html
-# Для других страниц необходимо создать подобные скрипты
+# Этот скрипт ориентирован на работу со страницей subsctiption.html
 
 
 # Подключение к базе данных
 $db = mysqli_connect("localhost", "root", "_Qeadzc90", "books");  # сервер, пользователь, пароль, база данных
 
-$isbn = $_REQUEST['isbn'];
+$id = $_REQUEST['id'];
 
-if ($isbn !== "") {
-    $sql = "DELETE FROM editions WHERE isbn = $isbn";
+if ($id !== "") {
+    $sql = "DELETE FROM subscriptions WHERE sub_id = $id";
 }
 
 # Вывод сообщения об успехе / неудачи операции

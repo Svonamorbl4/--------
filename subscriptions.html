@@ -29,14 +29,43 @@
 <fieldset class="fieldset">
     <form action="./scripts/subscriptions.php" class="fieldset__form">
         <div class="row">
-            <label for="title">Подписка:</label><br/>
-            <input type="text" name="title" size="50"><br/>
-            <label class="even" for="author">Цена:</label><br/>
-            <input type="text" name="author" size="50"><br/>
+            <label for="id">ID подписки:</label><br/>
+            <input type="text" name="id" size="50"><br/>
+            <label class="even" for="price">Стоимость:</label><br/>
+            <input type="text" name="price" size="50"><br/>
         </div>
-
         <div class="row">
             <input id="submit" type="submit" value="Найти"><br/>
+        </div>
+    </form>
+    <form action="./scripts/subscriptions_add.php" class="fieldset__form">
+        <div class="row">
+            <label for="id">* id подписки:</label><br/>
+            <input type="text" name="id" size="50"><br/>
+            <label class="even" for="isbn">isbn:</label><br/>
+            <input type="text" name="isbn" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="price">Стоимость:</label><br/>
+            <input type="text" name="price" size="50"><br/>
+        </div>
+        <div class="row">
+            <label for="activation">Начало (YYYY:MM:DD):</label><br/>
+            <input type="text" name="activation" size="50"><br/>
+            <label class="even" for="decontamination">Конец (YYYY:MM:DD):</label><br/>
+            <input type="text" name="decontamination" size="50"><br/>
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Добавить"><br/>
+        </div>
+    </form>
+    <form action="./scripts/subscriptions_drop.php" class="fieldset__form">
+        <div class="row">
+            <label for="id">* id подписки:</label><br/>
+            <input type="text" name="id" size="50"><br/> 
+        </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Удалить"><br/>
         </div>
     </form>
 </fieldset>

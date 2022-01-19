@@ -47,7 +47,7 @@ body {
   }
 
 .menu {
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 0;
 }
 
@@ -80,7 +80,6 @@ body {
 
 .fieldset {
     background-color: rgb(59, 68, 70);
-    margin-top: 50px;
     font-size: 1.5em;
 }
 
@@ -114,6 +113,10 @@ input:focus {
     font-size: 2rem;
     font-family: cursive;
     cursor: pointer;
+}
+
+form {
+    border-bottom: 2px dashed silver;
 }
 
 .footer {
